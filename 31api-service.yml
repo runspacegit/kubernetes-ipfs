@@ -10,4 +10,4 @@ spec:
     name: api
   selector:
     app: ipfs
-  type: NodePort
+  type: LoadBalancer

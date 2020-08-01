@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: ipfs
@@ -6,6 +6,9 @@ metadata:
 spec:
   serviceName: ipfs
   replicas: 4
+  selector:
+    matchLabels:
+      app: ipfs
   template:
     metadata:
       labels:
